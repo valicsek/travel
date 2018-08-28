@@ -20,7 +20,11 @@ namespace Travel
             {
                 if( UsernameEntry.Text == "test")
                 {
-                    throw new NotImplementedException();
+                    Navigation.PushAsync(new HomePage());
+                }
+                else
+                {
+                    DisplayAlert("Alert", "Username or password is not correct!", "OK");
                 }
             }
             else
