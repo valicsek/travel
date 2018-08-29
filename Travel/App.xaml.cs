@@ -11,7 +11,10 @@ namespace Travel
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage mainPage = new MainPage();
+            NavigationPage.SetHasNavigationBar(mainPage, false);
+
+            MainPage = new NavigationPage(mainPage);
         }
 
         protected override void OnStart()
