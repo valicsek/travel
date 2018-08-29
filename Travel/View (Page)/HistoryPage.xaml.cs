@@ -23,7 +23,7 @@ namespace Travel
                 using(SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
                 {
                     conn.CreateTable<Post>();
-                    var posts = conn.Table<Post>().ToList();
+                    HistoryListView.ItemsSource = conn.Table<Post>().ToList();
                 }
             } catch (SQLiteException ex)
             {
