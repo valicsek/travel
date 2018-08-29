@@ -7,6 +7,7 @@ namespace Travel
 {
     public partial class App : Application
     {
+        public static string DatabaseLocation = string.Empty;
         public App()
         {
             InitializeComponent();
@@ -14,6 +15,16 @@ namespace Travel
             MainPage mainPage = new MainPage();
             NavigationPage.SetHasNavigationBar(mainPage, false);
 
+            MainPage = new NavigationPage(mainPage);
+        }
+
+        public App(string databaseLocation)
+        {
+            InitializeComponent();
+            DatabaseLocation = databaseLocation;
+
+            MainPage mainPage = new MainPage();
+            NavigationPage.SetHasNavigationBar(mainPage, false);
             MainPage = new NavigationPage(mainPage);
         }
 

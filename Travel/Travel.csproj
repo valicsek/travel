@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
-    <PackageReference Include="System.Data.SQLite" Version="1.0.109.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="HistoryPage.xaml.cs">
@@ -27,6 +27,8 @@
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="Assets\Images\" />
+    <Folder Include="Config\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Images\logo.png" />

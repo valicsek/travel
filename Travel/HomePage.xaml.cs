@@ -11,5 +11,10 @@ namespace Travel
         {
             InitializeComponent();
         }
+
+        void OnAddButtonClicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new NewTravelPage());
+        }
     }
 }
