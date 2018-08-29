@@ -18,7 +18,7 @@ namespace Travel
         {
             if ( !string.IsNullOrEmpty(UsernameEntry.Text) && !string.IsNullOrEmpty(PasswordEntry.Text))
             {
-                if( UsernameEntry.Text == "test")
+                if( UsernameEntry.Text.ToLower() == "test")
                 {
                     Navigation.PushAsync(new HomePage());
                 }
