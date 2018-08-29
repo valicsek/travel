@@ -19,5 +19,18 @@
     <Compile Update="ProfilePage.xaml.cs">
       <DependentUpon>ProfilePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="Assets\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Assets\Images\logo.png" />
   </ItemGroup>
 </Project>

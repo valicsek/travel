@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Travel" x:Class="Travel.MainPage">
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Travel"
+    x:Class="Travel.MainPage"
+    BackgroundColor="{StaticResource Accent0}">
     <StackLayout
         VerticalOptions="Center"
-        Margin="20">
-        <Entry 
+        Margin="20" >
+        <Image 
+            Source="logo.png"
+            Aspect="AspectFit"/>
+        <Entry
             x:Name="UsernameEntry"
             Placeholder="Username"
+            TextColor="{StaticResource Accent1}"
+            PlaceholderColor="{StaticResource Accent3}"
             Keyboard="Default"/>
         <Entry
             x:Name="PasswordEntry"
             Placeholder="Password"
             Keyboard="Default"
+            TextColor="{StaticResource Accent1}"
+            PlaceholderColor="{StaticResource Accent3}"
             IsPassword="true"/>
         <Button
             x:Name="LoginButton"
             Text="Log in"
             Clicked="OnButtonLogInClicked"
-            Margin="0,50,0,0"/>
+            BackgroundColor="{StaticResource Accent1}"
+            TextColor="{StaticResource Accent0}"
+            Margin="0,25,0,0"/>
     </StackLayout>
 </ContentPage>
