@@ -13,6 +13,7 @@
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
     <PackageReference Include="sqlite-net-pcl" Version="1.4.118" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="3.1.0.697729" />
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
@@ -20,6 +21,8 @@
     <Folder Include="Config\" />
     <Folder Include="Model\" />
     <Folder Include="View %28Page%29\" />
+    <Folder Include="Services\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Images\logo.png" />
