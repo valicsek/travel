@@ -15,12 +15,14 @@
             x:Name="UsernameEntry"
             Placeholder="Username"
             TextColor="{StaticResource Accent1}"
+            BackgroundColor="Transparent"
             PlaceholderColor="{StaticResource Accent3}"
             Keyboard="Default"/>
         <Entry
             x:Name="PasswordEntry"
             Placeholder="Password"
             Keyboard="Default"
+            BackgroundColor="Transparent"
             TextColor="{StaticResource Accent1}"
             PlaceholderColor="{StaticResource Accent3}"
             IsPassword="true"/>
