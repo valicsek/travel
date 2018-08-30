@@ -159,5 +159,13 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\Icons\add-logo.png" />
+    <BundleResource Include="Resources\Icons\camera-logo.png" />
+    <BundleResource Include="Resources\Icons\history-logo.png" />
+    <BundleResource Include="Resources\Icons\map-logo.png" />
+    <BundleResource Include="Resources\Icons\profile-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Icons\" />
   </ItemGroup>
 </Project>
