@@ -3,12 +3,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Travel"
-    x:Class="Travel.HomePage">
+    x:Class="Travel.HomePage"
+    >
         <TabbedPage.ToolbarItems>
             <ToolbarItem Text="Add" Clicked="OnAddButtonClicked"/>
         </TabbedPage.ToolbarItems>
-        <local:HistoryPage Title="History"/>
-        <local:MapPage Title="Map"/>
-        <local:ProfilePage Title="Profile"/>
-        <local:CameraPage Title="Camera" />
+        <local:HistoryPage Icon="Icons/history-logo.png" Title="History"/>
+        <local:MapPage Icon="Icons/map-logo.png" Title="Map"/>
+        <local:ProfilePage Icon="Icons/profile-logo.png" Title="Profile"/>
+        <local:CameraPage Icon="Icons/camera-logo.png" Title="Camera" />
 </TabbedPage>
