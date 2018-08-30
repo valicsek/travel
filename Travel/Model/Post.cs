@@ -9,24 +9,16 @@ namespace Travel.Model
         [PrimaryKey, AutoIncrement]
         public int Id
         {
-            get { return id; }
-            set
-            {
-                this.id = value;
-                OnPropertyChanged("Id");
-            }
+            get => id;
+            set => SetField(ref id, value);
         }
 
         private string experience;
         [MaxLength(200)]
         public string Experience
         {
-            get { return experience; }
-            set
-            {
-                this.experience = value;
-                OnPropertyChanged("Experience");
-            }
+            get => experience;
+            set => SetField(ref experience, value);
         }
 
     }
