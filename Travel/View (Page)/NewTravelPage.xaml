@@ -3,10 +3,17 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save" Clicked="OnSaveButtonClicked"/>
     </ContentPage.ToolbarItems>
-    <StackLayout>
+    <StackLayout
+        Margin="10"
+        VerticalOptions="CenterAndExpand">
+       <Label>Share your experience</Label>
        <Entry 
             x:Name="ExperienceEntry"
             Placeholder="Write your experience"
         />
+        <Button
+            Text="Save"
+            Clicked="OnSaveButtonClicked"
+            Style="{StaticResource RedTravelButton}"/>
     </StackLayout>
 </ContentPage>

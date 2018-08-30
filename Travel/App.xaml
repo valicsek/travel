@@ -2,10 +2,26 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Travel.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Accent0">#EC4330</Color>
-            <Color x:Key="Accent1">#FFFFFF</Color>
-            <Color x:Key="Accent2">#7DA6BD</Color>
-            <Color x:Key="Accent3">#E4DC86</Color>
+                <Color x:Key="Accent0">#EC4330</Color>
+                <Color x:Key="Accent1">#FFFFFF</Color>
+                <Color x:Key="Accent2">#7DA6BD</Color>
+                <Color x:Key="Accent3">#E4DC86</Color>
+            
+                <Style x:Key="WhiteTravelButton" TargetType="Button">
+                    <Setter Property="FontFamily" Value="Segoe UI"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="BackgroundColor" Value="{StaticResource Accent1}"/>
+                    <Setter Property="TextColor" Value="{StaticResource Accent0}"/>
+                    <Setter Property="Margin" Value="0,25,0,0"/>
+               </Style>
+            
+               <Style x:Key="RedTravelButton" TargetType="Button">
+                    <Setter Property="FontFamily" Value="Segoe UI"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="BackgroundColor" Value="{StaticResource Accent0}"/>
+                    <Setter Property="TextColor" Value="{StaticResource Accent1}"/>
+                    <Setter Property="Margin" Value="0,25,0,0"/>
+               </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

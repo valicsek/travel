@@ -7,7 +7,7 @@
     BackgroundColor="{StaticResource Accent0}">
     <StackLayout
         VerticalOptions="Center"
-        Margin="20" >
+        Margin="10" >
         <Image 
             Source="logo.png"
             Aspect="AspectFit"/>
@@ -30,8 +30,7 @@
             x:Name="LoginButton"
             Text="Log in"
             Clicked="OnButtonLogInClicked"
-            BackgroundColor="{StaticResource Accent1}"
-            TextColor="{StaticResource Accent0}"
-            Margin="0,25,0,0"/>
+            Style="{StaticResource WhiteTravelButton}"
+        />
     </StackLayout>
 </ContentPage>

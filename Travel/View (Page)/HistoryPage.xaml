@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Travel.HistoryPage">
-    <ListView x:Name="HistoryListView">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Experience}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout
+        Margin="10">
+        <Label HorizontalOptions="CenterAndExpand">List of Experience</Label>
+        <ListView x:Name="HistoryListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell 
+                        Text="{Binding Experience}"
+                        TextColor="{StaticResource Accent0}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
