@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Travel.HistoryPage">
     <StackLayout
         Margin="10">
-        <Label HorizontalOptions="CenterAndExpand">List of Experience</Label>
+        <Label HorizontalOptions="CenterAndExpand" FontAttributes="Bold">List of Experience</Label>
         <ListView 
             x:Name="HistoryListView"
             ItemSelected="OnHistoryItemSelected"
