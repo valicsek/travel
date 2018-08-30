@@ -4,6 +4,10 @@
         <Button Text="Take a Photo" Clicked="OnButtonTakePhotoClicked"/>
         <Button Text="Take a Video" Clicked="OnButtonTakeVideoClicked"/>
         <Image x:Name="CameraImage"
-               Aspect="AspectFit"/>
+               BackgroundColor="Black"
+               Aspect="AspectFit"
+               WidthRequest="100"
+               HeightRequest="400"
+               />
     </StackLayout>
 </ContentPage>
