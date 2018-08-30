@@ -38,5 +38,11 @@
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location to show history places</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need camera permission for take picture, video.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need camera permission for take picture, video.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We need camera permission for take picture, video.</string>
 </dict>
 </plist>
