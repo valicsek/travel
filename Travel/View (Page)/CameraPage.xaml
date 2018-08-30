@@ -6,8 +6,7 @@
         <Image x:Name="CameraImage"
                BackgroundColor="Black"
                Aspect="AspectFit"
-               WidthRequest="100"
-               HeightRequest="400"
-               />
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand"               />
     </StackLayout>
 </ContentPage>
