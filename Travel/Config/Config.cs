@@ -7,5 +7,6 @@ namespace Travel
         static string dbName = "travel.sqlite";
         static string folderPath = Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
         public static string databasePath = Path.Combine(folderPath, dbName);
+        public static string exampleProfileApiRequest = "https://reqres.in/api/users";
     }
 }
