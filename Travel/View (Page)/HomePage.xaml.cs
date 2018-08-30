@@ -22,5 +22,10 @@ namespace Travel
         {
             Navigation.PushAsync(new NewTravelPage());
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }
