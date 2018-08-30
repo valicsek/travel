@@ -29,8 +29,18 @@ namespace Travel.iOS
             CrossMedia.Current.Initialize();
 
             LoadApplication(new App(Config.databasePath));
-
+            this.setupView();
             return base.FinishedLaunching(app, options);
+        }
+
+        private void setupView()
+        {
+            UIColor tintColor = UIColor.White;
+            UIColor navigationBarColor = UIColor.FromRGB(236,67,48);
+            UINavigationBar.Appearance.BarTintColor = navigationBarColor;
+            UINavigationBar.Appearance.TintColor = tintColor;
+            UINavigationBar.Appearance.TitleTextAttributes = new UIStringAttributes() { ForegroundColor = UIColor.White };
+            UINavigationBar.Appearance.Translucent = false;
         }
     }
 }
