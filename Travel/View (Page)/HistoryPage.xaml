@@ -3,12 +3,17 @@
     <StackLayout
         Margin="10">
         <Label HorizontalOptions="CenterAndExpand">List of Experience</Label>
-        <ListView x:Name="HistoryListView">
+        <ListView 
+            x:Name="HistoryListView"
+            ItemSelected="OnHistoryItemSelected"
+            ItemsSource="{Binding Posts}"
+            >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell 
+                    <TextCell
                         Text="{Binding Experience}"
-                        TextColor="{StaticResource Accent0}"/>
+                        TextColor="{StaticResource Accent0}"
+                    />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
