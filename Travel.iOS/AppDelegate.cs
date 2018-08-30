@@ -5,6 +5,7 @@ using System.IO;
 
 using Foundation;
 using UIKit;
+using Plugin.Media;
 
 namespace Travel.iOS
 {
@@ -25,6 +26,7 @@ namespace Travel.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
+            CrossMedia.Current.Initialize();
 
             LoadApplication(new App(Config.databasePath));
 
