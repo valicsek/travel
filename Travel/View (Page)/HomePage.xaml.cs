@@ -12,6 +12,12 @@ namespace Travel
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            NavigationPage.SetHasBackButton(this, false);
+        }
+
         void OnAddButtonClicked(object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new NewTravelPage());
