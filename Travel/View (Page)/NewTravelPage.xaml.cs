@@ -27,22 +27,8 @@ namespace Travel
                     {
                         Experience = ExperienceEntry.Text
                     };
-
-                    using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
-                    {
-                        conn.CreateTable<Post>();
-                        int rows = conn.Insert(post);
-
-                        if (rows > 0)
-                        {
-                            DisplayAlert("Success", "Experience sucessfully added", "OK");
-                        }
-                        else
-                        {
-                            throw new Exception("Something went wrong");
-                        }
-                    }
-                 
+                    bool success = BasicModel<Post>.Insert(post);
+                    if (success) DisplayAlert("Success", "Experience sucessfully added", "OK");
                 }
                 catch (SQLiteException ex)
                 {
