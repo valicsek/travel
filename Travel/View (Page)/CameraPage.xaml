@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Travel.CameraPage">
-    <StackLayout>
-        <Button Text="Take a Photo" Clicked="OnButtonTakePhotoClicked"/>
-        <Button Text="Take a Video" Clicked="OnButtonTakeVideoClicked"/>
-        <Image x:Name="CameraImage"
+    <StackLayout Padding="10">
+          <Image x:Name="CameraImage"
                BackgroundColor="Black"
-               Aspect="AspectFit"
+               Aspect="AspectFill"
                VerticalOptions="FillAndExpand"
-               HorizontalOptions="FillAndExpand"               />
+               HorizontalOptions="FillAndExpand"/>
+        
+        <Button Text="Take a Photo" Clicked="OnButtonTakePhotoClicked" Style="{StaticResource RedTravelButton}"/>
+        <Button Text="Take a Video" Clicked="OnButtonTakeVideoClicked" Style="{StaticResource RedTravelButton}"/>
+     
     </StackLayout>
 </ContentPage>

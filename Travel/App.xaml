@@ -20,7 +20,6 @@
                     <Setter Property="FontSize" Value="14"/>
                     <Setter Property="BackgroundColor" Value="{StaticResource Accent0}"/>
                     <Setter Property="TextColor" Value="{StaticResource Accent1}"/>
-                    <Setter Property="Margin" Value="0,25,0,0"/>
                </Style>
         </ResourceDictionary>
     </Application.Resources>
