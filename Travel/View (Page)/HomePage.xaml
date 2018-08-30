@@ -6,7 +6,8 @@
     x:Class="Travel.HomePage"
     >
         <TabbedPage.ToolbarItems>
-            <ToolbarItem Text="Add" Clicked="OnAddButtonClicked"/>
+            <ToolbarItem Order="Secondary" Text="Add Experience" Clicked="OnAddButtonClicked"/>
+            <ToolbarItem Order="Secondary" Text="Logout"/>
         </TabbedPage.ToolbarItems>
         <local:HistoryPage Icon="Icons/history-logo.png" Title="History"/>
         <local:MapPage Icon="Icons/map-logo.png" Title="Map"/>
