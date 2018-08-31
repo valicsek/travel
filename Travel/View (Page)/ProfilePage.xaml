@@ -14,6 +14,10 @@
                         FontAttributes="Bold">Profile page</Label>
                 </StackLayout>
                 <StackLayout Padding="10">
+                    <ActivityIndicator x:Name="LoadingIndicator"
+                                       HeightRequest="40"
+                                       IsRunning="true"
+                                       HorizontalOptions="CenterAndExpand"/>
                     <Frame
                         CornerRadius="0"
                         VerticalOptions="FillAndExpand" 

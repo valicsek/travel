@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 using Travel.Model;
 
 namespace Travel.Services
@@ -12,16 +13,24 @@ namespace Travel.Services
     {
         public async static Task<List<Data>> GetAsyncRequest(string url)
         {
-            List<Data> result;
-            using (HttpClient client = new HttpClient())
+            if (!CrossConnectivity.Current.IsConnected)
             {
-                var response = await client.GetAsync(url);
-                var json = await response.Content.ReadAsStringAsync();
-
-                RootObject root = JsonConvert.DeserializeObject<RootObject>(json);
-                result = root.Data;
+                throw new Exception("No Internet connection");
             }
-            return result;
+            else
+            {
+                List<Data> result;
+                using (HttpClient client = new HttpClient())
+                {
+                    var response = await client.GetAsync(url);
+                    var json = await response.Content.ReadAsStringAsync();
+
+                    RootObject root = JsonConvert.DeserializeObject<RootObject>(json);
+                    result = root.Data;
+                }
+                return result;
+            }
+
         }
     }
 }

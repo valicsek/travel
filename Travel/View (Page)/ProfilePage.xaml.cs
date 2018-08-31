@@ -17,7 +17,7 @@ namespace Travel
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
+            LoadingIndicator.IsRunning = true;
             try
             {
                 List<Data> result = await RestService<Data>.GetAsyncRequest(Config.exampleProfileApiRequest);
@@ -25,7 +25,6 @@ namespace Travel
 
                 if (users.Count > 0)
                 {
-                    LoadingIndicator.IsRunning = false;
                     await DisplayAlert("First name", users[0].First_name, "OK");
                 }
             } catch (JsonException e)
@@ -40,7 +39,10 @@ namespace Travel
                 errorMessage += e.Message;
                 await DisplayAlert("Alert", errorMessage, "OK");
             }
-          
+            finally
+            {
+                LoadingIndicator.IsRunning = false;
+            }
         }
     }
 }
