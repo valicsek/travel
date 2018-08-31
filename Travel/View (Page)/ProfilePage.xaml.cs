@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Newtonsoft.Json;
+using Travel.Model;
+using Travel.Services;
 using Xamarin.Forms;
 
 namespace Travel
@@ -10,6 +12,35 @@ namespace Travel
         public ProfilePage()
         {
             InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            try
+            {
+                List<Data> result = await RestService<Data>.GetAsyncRequest(Config.exampleProfileApiRequest);
+                List<Data> users = result.FindAll((obj) => obj.First_name.ToLower().Contains("g"));
+
+                if (users.Count > 0)
+                {
+                    LoadingIndicator.IsRunning = false;
+                    await DisplayAlert("First name", users[0].First_name, "OK");
+                }
+            } catch (JsonException e)
+            {
+                string errorMessage = "Something went wrong with data:\n";
+                errorMessage += e.Message;
+                await DisplayAlert("Alert", errorMessage, "OK");
+            }
+            catch (Exception e)
+            {
+                string errorMessage = "Something went wrong:\n";
+                errorMessage += e.Message;
+                await DisplayAlert("Alert", errorMessage, "OK");
+            }
+          
         }
     }
 }
