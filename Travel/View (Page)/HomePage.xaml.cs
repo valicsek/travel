@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Travel.Logic;
 using Xamarin.Forms;
 
 namespace Travel
@@ -16,6 +16,15 @@ namespace Travel
         {
             base.OnAppearing();
             NavigationPage.SetHasBackButton(this, false);
+
+            if (HomeLogic.CheckInternetIsAvailable())
+            {
+                DisplayAlert("Info", "Internet connected", "OK");
+            }
+            else
+            {
+                DisplayAlert("Alert", "The Internet is not connected", "OK");
+            }
         }
 
         void OnAddButtonClicked(object sender, System.EventArgs e)
