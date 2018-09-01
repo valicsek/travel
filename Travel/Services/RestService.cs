@@ -22,6 +22,7 @@ namespace Travel.Services
                 List<Data> result;
                 using (HttpClient client = new HttpClient())
                 {
+                    client.Timeout = Config.timeoutInSeconds;
                     var response = await client.GetAsync(url);
                     var json = await response.Content.ReadAsStringAsync();
 
