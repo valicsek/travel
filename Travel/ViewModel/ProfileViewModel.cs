@@ -8,7 +8,7 @@ using Travel.ViewModel.Interfaces;
 
 namespace Travel.ViewModel
 {
-    public class ProfileViewModel: ViewModelBase, IHistoryService
+    public class ProfileViewModel: ViewModelBase, IProfileService
     {
         private Data profile;
         public Data Profile

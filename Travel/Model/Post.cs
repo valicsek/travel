@@ -3,7 +3,7 @@ using SQLite;
 
 namespace Travel.Model
 {
-    public class Post : Bindable
+    public class Post : BasicModel<Post>
     {
         private int id;
         [PrimaryKey, AutoIncrement]

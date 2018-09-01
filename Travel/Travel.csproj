@@ -30,6 +30,7 @@
     <Folder Include="Style\" />
     <Folder Include="ViewModel\" />
     <Folder Include="ViewModel\Interfaces\" />
+    <Folder Include="Model\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Images\logo.png" />

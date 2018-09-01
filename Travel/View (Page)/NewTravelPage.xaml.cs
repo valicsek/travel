@@ -27,7 +27,7 @@ namespace Travel
                     {
                         Experience = ExperienceEntry.Text
                     };
-                    bool success = BasicModel<Post>.Insert(post);
+                    bool success = post.Save();
                     if (success) DisplayAlert("Success", "Experience sucessfully added", "OK");
                 }
                 catch (SQLiteException ex)

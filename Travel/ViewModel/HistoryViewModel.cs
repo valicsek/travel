@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using SQLite;
 using Travel.Model;
 
 namespace Travel.ViewModel
@@ -22,6 +24,16 @@ namespace Travel.ViewModel
         public HistoryViewModel()
         {
             this.posts = new List<Post>();
+        }
+
+        public void GetPosts()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<Post>();
+                this.Posts = conn.Table<Post>().ToList();
+                // HistoryListView.ItemsSource = conn.Table<Post>().ToList();
+            }
         }
     }
 }

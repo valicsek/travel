@@ -24,12 +24,7 @@ namespace Travel
 
             try
             {
-                using(SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
-                {
-                    conn.CreateTable<Post>();
-                    this.ViewModel.Posts = conn.Table<Post>().ToList();
-                    // HistoryListView.ItemsSource = conn.Table<Post>().ToList();
-                }
+                this.ViewModel.GetPosts();
             } catch (SQLiteException ex)
             {
                 string errorMessage = "Something went wrong: \n";

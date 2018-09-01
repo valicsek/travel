@@ -1,28 +1,42 @@
-﻿using System;
-using SQLite;
+﻿using SQLite;
+using Travel.Model.Interfaces;
 
 namespace Travel.Model
 {
-    public abstract class BasicModel<T>
+    public abstract class BasicModel<T>: Bindable, IModelService<T>
     {                                 
-        public static bool Insert(T model)
+        public bool Save()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 conn.CreateTable<T>();
-                int rows = conn.Insert(model);
+                int rows = conn.Insert(this);
                 if (rows > 0) return true;
+                conn.Close();
             }
             return false;
         }
 
-        public static bool Delete(T model)
+        public bool Delete()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
             {
                 conn.CreateTable<T>();
-                int rows = conn.Delete(model);
+                int rows = conn.Delete(this);
                 if (rows > 0) return true;
+                conn.Close();
+            }
+            return false;
+        }
+
+        public bool Edit()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+            {
+                conn.CreateTable<T>();
+                int rows = conn.Update(this);
+                if (rows > 0) return true;
+                conn.Close();
             }
             return false;
         }
