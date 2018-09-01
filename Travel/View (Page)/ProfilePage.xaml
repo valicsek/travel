@@ -16,14 +16,15 @@
                 <StackLayout Padding="10">
                     <ActivityIndicator x:Name="LoadingIndicator"
                                        HeightRequest="40"
-                                       IsRunning="true"
+                                       IsRunning="{Binding InProgress}"
                                        HorizontalOptions="CenterAndExpand"/>
                     <Frame
                         CornerRadius="0"
                         VerticalOptions="FillAndExpand" 
                         HorizontalOptions="FillAndExpand">
                         <StackLayout>
-                            <Label>Profile page</Label>            
+                            <Label FontAttributes="Bold">Profile name</Label>
+                            <Entry Text="{Binding Profile.Last_name}" IsEnabled="false"/>
                         </StackLayout>
                     </Frame>
                     <Frame

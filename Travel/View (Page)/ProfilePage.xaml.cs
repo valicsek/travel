@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Travel.Model;
 using Travel.Services;
+using Travel.ViewModel;
 using Xamarin.Forms;
 
 namespace Travel
 {
     public partial class ProfilePage : ContentPage
     {
+        ProfileViewModel ViewModel;
         public ProfilePage()
         {
             InitializeComponent();
+            this.ViewModel = new ProfileViewModel();
+            this.BindingContext = this.ViewModel;
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            LoadingIndicator.IsRunning = true;
             try
             {
-                List<Data> result = await RestService<Data>.GetAsyncRequest(Config.exampleProfileApiRequest);
-                List<Data> users = result.FindAll((obj) => obj.First_name.ToLower().Contains("g"));
-
-                if (users.Count > 0)
-                {
-                    await DisplayAlert("First name", users[0].First_name, "OK");
-                }
-            } catch (JsonException e)
+                this.ViewModel.InProgress = true;
+                await this.ViewModel.RequestDataUsingRestService();
+            }
+            catch (JsonException e)
             {
                 string errorMessage = "Something went wrong with data:\n";
                 errorMessage += e.Message;
@@ -41,7 +40,7 @@ namespace Travel
             }
             finally
             {
-                LoadingIndicator.IsRunning = false;
+                this.ViewModel.InProgress = false;
             }
         }
     }
