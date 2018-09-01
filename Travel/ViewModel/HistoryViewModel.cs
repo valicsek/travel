@@ -4,7 +4,7 @@ using Travel.Model;
 
 namespace Travel.ViewModel
 {
-    public class HistoryViewModel : Bindable
+    public class HistoryViewModel : ViewModelBase
     {
         private List<Post> posts;
         public List<Post> Posts

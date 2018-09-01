@@ -29,6 +29,7 @@
     <Folder Include="Services\" />
     <Folder Include="Style\" />
     <Folder Include="ViewModel\" />
+    <Folder Include="ViewModel\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Assets\Images\logo.png" />

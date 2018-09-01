@@ -4,18 +4,12 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Travel.Model;
 using Travel.Services;
+using Travel.ViewModel.Interfaces;
 
 namespace Travel.ViewModel
 {
-    public class ProfileViewModel: Bindable
+    public class ProfileViewModel: ViewModelBase, IHistoryService
     {
-        private bool inProgress;
-        public bool InProgress
-        {
-            get => inProgress;
-            set => SetField<bool>(ref inProgress, value);
-        }
-
         private Data profile;
         public Data Profile
         {
