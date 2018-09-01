@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Travel.ViewModel.Interfaces
 {
-    public interface IHistoryService
+    public interface IProfileService
     {
         Task RequestDataUsingRestService();
     }
